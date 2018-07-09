@@ -59,7 +59,23 @@ equations[3]= new MathEquation(11.0d,3.0d,'m');
     System.out.print("result=");
     System.out.println(equationOverload.getResult());
      
+     System.out.println("");
+     System.out.println("Using Inheritance");
+     System.out.println("");
      
+     CalculateBase[] calculators ={
+         
+         new Adder(25.0d,92.0d),
+         new Subtracter(225.0d,17.0),
+         new Multiplier(11.0d,3.0d),
+         new Divider(100.0d,50.0d)
+     };
+    
+    for (CalculateBase calculator:calculators){
+        calculator.calculate();
+        System.out.print("result=");
+    System.out.println(calculator.getResult());
+    }  
      
     }
     
